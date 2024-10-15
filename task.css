@@ -1,0 +1,51 @@
+/**
+
+  Use animations here. Useful resources on http://docs.codacloud.net
+
+**/
+
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes handMove {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes footMove {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+}
+
+.man {
+  animation: jump 2s ease-in-out infinite;
+}
+
+.left.hand,
+.right.hand {
+  animation: handMove 2s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+.left.foot,
+.right.foot {
+  animation: footMove 2s ease-in-out infinite;
+  transform-origin: top center;
+}
